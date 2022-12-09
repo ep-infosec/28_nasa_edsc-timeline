@@ -1,0 +1,89 @@
+.edsc-timeline-tools {
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: $color__black--050;
+  color: $color__black--900;
+  position: sticky;
+  z-index: 5;
+
+  &__action {
+    outline: 0;
+    border: 0;
+    background: transparent;
+    color: $color__black--700;
+    transition: all 0.2s ease;
+
+    svg {
+      height: 0.925rem;
+      width: 0.925rem;
+    }
+
+    &:hover {
+      color: $color__black--900;
+    }
+
+    &:active {
+      color: $color__black--750;
+    }
+
+    &:disabled {
+      color: $color__black--400;
+      cursor: not-allowed;
+    }
+  }
+
+  &__label {
+    padding: 0.025rem 0;
+    text-transform: uppercase;
+    font-size: 0.725rem;
+    color: $color__black--900;
+    letter-spacing: 0.02rem;
+    white-space: nowrap;
+    text-align: center;
+
+    &--resolution {
+      width: 3.25rem;
+    }
+
+    // Hour
+    &--focused-interval-1 {
+      width: 8.75rem;
+    }
+
+    // Day
+    &--focused-interval-2 {
+      width: 6.25rem;
+    }
+
+    // Month
+    &--focused-interval-3 {
+      width: 4.8125rem;
+    }
+
+    // Year & Decade
+    &--focused-interval-4,
+    &--focused-interval-5 {
+      width: 2.5625rem;
+    }
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 0.5rem 0.75rem;
+    border-right: 1px solid $color__black--250;
+
+    &--horizontal {
+      flex-direction: row;
+    }
+
+    .edsc-timeline-tools__label--resolution {
+      text-align: center;
+      width: 3.25rem;
+    }
+  }
+}
